@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The logical AND (&&) operator</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body style="margin: 50px;">
+    <h1>Adventure Park Ticket Checker</h1>
+    <h3>To get a ticket you must be:</h3>
+    <ol>
+        <li>between 16 and 65 years old</li>
+        <li>at least 4 feets tall</li>
+        <li>have parent permission if less than 12</li>
+    </ol>
+
+    <div id="userDetails" style="display: flex; justify-content: space-between; width: 80%">
+        <input type="number" placeholder="Enter your age" id="userAge">
+        <input type="number" placeholder="Enter your height in feets" id="userHeight">
+        <label>
+            <input type="checkbox" id="parentsPermission">
+            Parent's Permission</label>
+    </div>
+    <button id="checkForEligibility">Check for eligibility</button>
+    <div id="result"></div>
+</body>
+<script src="scripts.js"></script>
+</html>
