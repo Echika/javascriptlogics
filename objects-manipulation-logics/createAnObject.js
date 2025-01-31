@@ -15,7 +15,6 @@ const echikaObj = {
     },
     status: 'married',
     noOfKids: 3
-
 }
 
 console.log(`the color of Echika's house is ${echikaObj.address.houseColor}`);
