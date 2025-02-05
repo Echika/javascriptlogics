@@ -14,5 +14,5 @@ const longestWord = (str) => {
 }
 //testing
 
-longestWord('long words are easy to discover'); //discover
-longestWord('i am glad i met you today') // today
+console.log(longestWord('long words are easy to discover')); //discover
+console.log(longestWord('i am glad i met you today')); // today
