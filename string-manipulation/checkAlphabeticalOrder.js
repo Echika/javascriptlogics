@@ -3,5 +3,5 @@ function checkAlphabeticalOrder(str) {
 }
 
 //testing
-console.log(checkAlphabeticalOrder('arrived'))
-console.log(checkAlphabeticalOrder('abhor'))
+console.log(checkAlphabeticalOrder('arrived')) //false
+console.log(checkAlphabeticalOrder('abhor')) //true
