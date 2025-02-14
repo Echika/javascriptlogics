@@ -14,5 +14,11 @@ const countConsonants = (str) => {
     }
     return count;
 }
-countConsonants('help me oh God') // 7
-countConsonants('iloveyou') // 3
+
+//Alternatively using the regular expression which makes the whole job a breeze
+const regCountConsonants = (str) => {
+    return str.match(/[^aeiou]/g).length
+}
+
+console.log(regCountConsonants('help me oh God')) // 10
+console.log(countConsonants('iloveyou')) // 3
