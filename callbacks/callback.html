@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning how to use callbacks</title>
+  </head>
+  <body style="font-family: 'Courier New', Courier, monospace">
+    <h1>Learning how to use callback functions</h1>
+    <h2 id="theResult"></h2>
+  </body>
+  <script>
+      // Using Anonymous function
+//     function doMath(number1, number2, callback) {
+//       let result = callback(number1, number2);
+//       document.getElementById("theResult").innerHTML +=
+//         "The result is " + result + "<br/>";
+//     }
+
+
+//     document.addEventListener("DOMContentLoaded", function () {
+//       doMath(6, 3, function (numb1, numb2) {
+//         return numb1 * numb2;
+//       });
+
+//       doMath(8, 3, function (numb1, numb2) {
+//         return numb1 + numb2;
+//       });
+
+//       doMath(81, 4, function (numb1, numb2) {
+//         return numb1 % numb2;
+//       });
+
+//       doMath(56, 9, function (numb1, numb2) {
+//         return numb1 - numb2;
+//       });
+
+//       doMath(67, 33.4, function (numb1, numb2) {
+//         return (numb1 / numb2).toFixed(2);
+//       });
+//     });
+
+    // Using named functions
+
+    function multiplyThem(numb1, numb2){
+        return numb1 * numb2;
+    }
+
+    function modThem(numb1, numb2){
+        return numb1 % numb2;
+    }
+
+    function divideThem(numb1, numb2){
+        return (numb1 / numb2).toFixed(2);
+    }
+
+    function subtractThem(numb1, numb2){
+        return numb1 - numb2;
+    }
+
+    function addThem (numb1, numb2){
+        return numb1 + numb2;
+    }
+
+    function doMath(number1, number2, callback){
+        if(typeof callback === 'function'){
+            let result = callback(number1, number2);
+            document.querySelector('#theResult').innerHTML += ( "The result is "  + result + "<br/>" )
+        
+    }
+}
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        doMath(45, 9, divideThem);
+        doMath(45, 9, subtractThem);
+        doMath(45, 9, addThem);
+        doMath(45, 9, multiplyThem);
+        doMath(45, 9, modThem)
+    });
+
+ </script
+</html>
+    

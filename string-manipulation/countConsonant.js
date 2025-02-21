@@ -8,7 +8,7 @@ const countConsonants = (str) => {
     let vowels = ['a', 'e', 'i', 'o', 'u'];
 
     for(const char of str){
-        if(!vowels.includes(char) && char >= 'a' && char <= 'z'){
+        if(!vowels.includes(char)){
             count++;
         }
     }
@@ -17,8 +17,9 @@ const countConsonants = (str) => {
 
 //Alternatively using the regular expression which makes the whole job a breeze
 const regCountConsonants = (str) => {
-    return str.match(/[^aeiou]/g).length
+    return str.match(/[^aeiou]/gi).length
 }
 
 console.log(regCountConsonants('help me oh God')) // 10
+console.log(regCountConsonants('thisChildrenWANTDeytalktoomuchfordream'))
 console.log(countConsonants('iloveyou')) // 3
